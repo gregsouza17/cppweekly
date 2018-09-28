@@ -2,7 +2,10 @@
 #define CONSTANTS_Q4
 
 namespace constants{
+  
   const double my_gravity(9.8);
+
+  //5 different times to avoid magic numbers
   const double t1(1);
   const double t2(2);
   const double t3(3);

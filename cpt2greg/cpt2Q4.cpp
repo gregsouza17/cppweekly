@@ -2,9 +2,7 @@
 #include "constants.h"
 
 double calculateHeight(double time,double initialHeight);
-
 void printHeight(double time, double height);
-
 void calculatePrintHeight(double time, double initialHeight);
 
 
