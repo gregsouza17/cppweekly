@@ -61,7 +61,6 @@ bool evaluateGuess(int value,int guess){
     std::cout << "Too High!" << std::endl;
   else
     std::cout << "Too Low!" << std::endl;
-
   return false;
 
 }
