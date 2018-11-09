@@ -5,7 +5,7 @@
 class Monster{
 public:
   enum MonsterType{
-
+    //Possible Monster Types
     Dragon,
     Goblin,
     Ogre,
@@ -19,13 +19,15 @@ public:
   };
   
 private:
+
   MonsterType m_type;
   std::string m_name, m_roar;
   int m_hp;
-
+  //The roar is the sound the monster makes when it is found
+  
   std::string getTypeString(){
-    switch(m_type){
-      
+    //Given the monster type, returns a string with the type name
+    switch(m_type){    
     case MonsterType::Dragon  : return "Dragon";        
     case MonsterType::Goblin  : return "Goblin";
     case MonsterType::Ogre    : return "Ogre";
@@ -41,11 +43,14 @@ private:
   }
   
 public:
-  
+  //Constructor
   Monster(MonsterType type, std::string name, std::string roar,int hp):
     m_type(type), m_name(name), m_roar(roar), m_hp(hp) {}
+  //End Constructor
   
   void print(){
+    
+    //Print the encounter String
     
     std::cout << m_name << " the " << getTypeString() << " ( " <<
       m_hp << " HP ) says " << m_roar << std::endl; 
@@ -55,7 +60,8 @@ public:
 
 
 class MonsterGenerator {
-  
+  //This class will be used to generate random monster encounters, given each a name, type and roar
+
 private:
   static int getRandomNumber(int min, int max)
   {
@@ -67,8 +73,8 @@ private:
   
 public:
   static Monster generateMonster(){
-    
-    
+
+    //Possible names and roars
     static std::string s_names[6]{ "Blarg", "Moog", "Pksh", "Tyrn", "Mort", "Hans" };
     static std::string s_roars[6]{ "*ROAR*", "*peep*", "*squeal*", "*whine*", "*hum*", "*burp*"};
     
@@ -88,6 +94,8 @@ public:
 
 int main()
 {
+  //Test
+  
   srand(static_cast<unsigned int>(time(0))); // set initial seed value to system clock
   rand(); // If using Visual Studio, discard first random value
   

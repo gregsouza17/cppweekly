@@ -1,8 +1,9 @@
 #include <iostream>
 
 class Point3d{
+  //Models 3d points
   double m_x, m_y, m_z;
-
+  
  public:
   void setValues(double x, double y, double z){
     m_x = x; m_y = y; m_z = z;

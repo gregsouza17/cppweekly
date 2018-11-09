@@ -8,8 +8,10 @@ private:
   double m_radius;
 
 public:
-  //Constructors
+  //Constructors -----------------------
+  
   Ball(const std::string &color = "black", double radius = 10.0){
+    //A ball can have a color and a radius
     m_color = color;
     m_radius = radius;
   }
@@ -18,6 +20,8 @@ public:
     m_radius = radius;
   }
 
+  //End Constructors --------------------
+
   void print(){
     std::cout << "color: " << m_color << ", radius: " << m_radius <<
       std::endl;
@@ -25,7 +29,7 @@ public:
 };
 
 int main(void){
-
+  //test
   Ball def;
   def.print();
  

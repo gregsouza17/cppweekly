@@ -2,7 +2,7 @@
 #include <cmath>
 
 class Point2d{
-
+  //Models a 2D point
 private:
   int m_x, m_y;
 
@@ -36,7 +36,7 @@ int main(void){
 
 
 double distanceTo(Point2d p, Point2d q){
-
+  //Calculate de euclidian distance between two points
   return std::sqrt((q.m_x-p.m_x)*(q.m_x-p.m_x) +
 		   (q.m_y-p.m_y)*(q.m_y-p.m_y));
 }

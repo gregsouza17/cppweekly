@@ -2,6 +2,7 @@
 #include <string>
 
 class Ball{
+  //Same as ball in ball8-5.cpp but overloading the constructors
 private:
   
   std::string m_color = "black";
@@ -20,7 +21,7 @@ public:
     m_color = color;
   }
   Ball() {}
-  
+  //End Constructors
   
 
   void print(){

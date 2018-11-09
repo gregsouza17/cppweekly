@@ -2,7 +2,7 @@
 #include <cstdint>
 
 class RGBA{
-
+  //Models a Red, Green, Blue, Alpha Channel
 private:
   std::uint8_t m_red, m_green, m_blue, m_alpha;
 

@@ -1,10 +1,7 @@
 #ifndef CARD
 #define CARD
-
-
 class Card{
-
-  
+  //Models a regular card, with suit and Rank as expected
 public:
   enum CardSuit
 {
@@ -60,10 +57,12 @@ public:
 #include <cassert>
 
 class Deck{
-
+  //Models a Deck with 52 Cards
 private:
   std::array<Card, 52> m_deck;
   int m_cardIndex;
+  //Card Index will keep track of which cards have been already
+  //dealt from the deck
 
   //Static Functions
   static void swapCard(Card &a, Card &b){
@@ -85,6 +84,7 @@ private:
 public:
 
   Deck(): m_cardIndex(0)
+	  //m_cardIndex starts form the top (0)
   {
     int card = 0;
     for (int suit = 0; suit < Card::MAX_SUITS; ++suit)

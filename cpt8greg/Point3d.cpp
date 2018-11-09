@@ -8,6 +8,7 @@ void Point3d::print()
 
 void Point3d::moveByVector(const Vector3d &v) 
 {
+  //Translates a a point by a given vector
   m_x += v.m_x;
   m_y += v.m_y;
   m_z += v.m_z;

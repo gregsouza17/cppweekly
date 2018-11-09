@@ -1,17 +1,17 @@
 //header file  for Vector 3d
-#IFNDEF VECTOR3D_H
-#DEFINE VECTOR3D_H
+#ifndef VECTOR3D_H
+#define VECTOR3D_H
 
-#INCLUDE "POINT3D.H"
+#include "Point3d.h"
 
-CLASS VECTOR3D
-{
-PRIVATE:
-  DOUBLE M_X, M_Y, M_Z;
+class Vector3d	
+{ //Models a 3D vector
+private:
+  double M_X, M_Y, M_Z;
+	 
+public:
   
-PUBLIC:
-  
-  Vector3d(double x, double y, double z)
+  Vector3d(double x=0, double y=0, double z=0)
     : m_x(x), m_y(y), m_z(z) { }
   
   void print();

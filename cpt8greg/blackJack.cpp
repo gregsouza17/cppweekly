@@ -4,8 +4,10 @@
 #include <cstdlib> // for rand() and srand()
 #include "cardClass.h"
 
+//Casting
 bool playBlackjack(const Deck deck);
 char getPlayerChoice();
+//End casting
 
 
 int main()
@@ -25,10 +27,10 @@ int main()
 
 
 
-//Card Functions
+//Card Functions ---------
 
 void Card::printCard() const
-{
+{ //Print a card as the following codes (as in the switchs)
   switch (m_rank)
     {
     case RANK_2:		std::cout << '2'; break;
@@ -44,7 +46,7 @@ void Card::printCard() const
     case RANK_QUEEN:	        std::cout << 'Q'; break;
     case RANK_KING:		std::cout << 'K'; break;
     case RANK_ACE:		std::cout << 'A'; break;
-    default:                  std::cout << 'E'; break;
+    default:                  std::cout << 'E'; break; //Error case
     }
  
   switch (m_suit)
@@ -53,13 +55,13 @@ void Card::printCard() const
     case SUIT_DIAMOND: std::cout << 'D'; break;
     case SUIT_HEART:	 std::cout << 'H'; break;
     case SUIT_SPADE:	 std::cout << 'S'; break;
-    default:           std::cout << 'E'; break;
+    default:           std::cout << 'E'; break; //Error case
     }
 }
   
   
 int Card::getCardValue() const
-{
+{ //Return the BlackJack Value of each card
   switch (m_rank)
     {
     case RANK_2:		return 2;
@@ -75,13 +77,15 @@ int Card::getCardValue() const
     case RANK_QUEEN:	        return 10;
     case RANK_KING:		return 10;
     case RANK_ACE:		return 11;
-    default:                    return -1;
+    default:                    return -1; //Error case
     }
 	
   return 0;
 }
+
+//End Card Functions --------------
   
-//Deck Functions
+//Deck Functions -----------------
 
 void Deck::printDeck(){
   
@@ -102,6 +106,7 @@ void Deck::shuffleDeck(){
       swapCard(m_deck[index], m_deck[swapIndex]);
     }
 
+  //After shuffling, we reset the index
   m_cardIndex = 0;
     
 }
@@ -110,12 +115,10 @@ const Card& Deck::dealCard()
 {
   assert(m_cardIndex < 52) ;
   return m_deck[m_cardIndex++];
-} 
+}
+//End Deck Functions ---------
 
-
-//Black Jack
-
-
+//Black Jack -----------------
 char getPlayerChoice()
 {
   std::cout << "(h) to hit, or (s) to stand: ";
